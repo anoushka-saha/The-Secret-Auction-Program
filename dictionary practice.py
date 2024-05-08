@@ -1,4 +1,4 @@
-user_input = input(print("Who's grades are you looking for?\n"))
+user_input = input("Who's grades are you looking for?:")
 
 student_scores = {
   "Harry": 81,
