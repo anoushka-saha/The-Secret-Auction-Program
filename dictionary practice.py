@@ -1,4 +1,4 @@
-user_input = input("Who's grades are you looking for?:")
+user_input = input("Who's grades are you looking for?")
 
 student_scores = {
   "Harry": 81,
@@ -8,6 +8,7 @@ student_scores = {
   "Neville": 62,
 }
 
+found = False
 for key in student_scores:
     if key == user_input:
         print("The student you are looking for is " + user_input + " and their grade is " + str(student_scores[key]))
@@ -19,7 +20,8 @@ for key in student_scores:
             print("This grade is acceptable")
         else:
             print("This grade is a fail")
-    else:
+        found = True
         break
-        
-print("The student you are looking for is not in our system")
+
+if not found:
+    print("The student you are looking for is not in our system")
